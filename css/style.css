@@ -45,8 +45,9 @@
 html,
 body {
   overflow-x: hidden;
-  /* Left aur right ka faltu overflow chupa deta hai */
   max-width: 100%;
+  width: 100%;
+  position: relative;
 }
 
 
@@ -908,6 +909,7 @@ ul {
   background-color: #ffffff;
   border-bottom: 1px solid var(--border-color);
   overflow: hidden;
+  max-width: 100vw;
 }
 
 .brands-title {
@@ -2346,6 +2348,37 @@ ul {
 
   .blog-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* === MOBILE HORIZONTAL OVERFLOW FIX === */
+@media (max-width: 992px) {
+  .hero-floating-card {
+    display: none;
+  }
+
+  .hero-section,
+  .brands-section,
+  .categories-section,
+  .featured-products-section,
+  .reviews-section,
+  .blog-section,
+  .cta-section,
+  .newsletter-section,
+  .apart-section,
+  .faq-section,
+  footer {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .container {
+    overflow-x: hidden;
+  }
+
+  .top-bar-ticker-wrap {
+    overflow: hidden;
+    max-width: 100%;
   }
 }
 
